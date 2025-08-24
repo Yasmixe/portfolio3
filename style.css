@@ -86,7 +86,7 @@ header ul a{
 .hero iframe {
   position: absolute;
   top: 50%;
-  left:58%;
+  left:50%;
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
@@ -97,7 +97,7 @@ header ul a{
 .hero-info {
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%); /* Centre le bloc */
     text-align: center;
     padding: 0 20px; /* Un peu de marge sur petits écrans */
@@ -152,7 +152,7 @@ header ul a{
   display: block;
   width: 100%;
   height: auto;
-   margin-top: -280px;
+   margin-top: -270px;
 }
 
 .wave2 { position: relative;
