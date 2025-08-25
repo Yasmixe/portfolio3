@@ -115,3 +115,18 @@ const seeMoreBtn = document.getElementById('see-more-btn');
             exp4.classList.toggle('hidden');
             seeMoreBtn.textContent = exp3.classList.contains('hidden') ? 'See More' : 'See Less';
         });
+document.addEventListener("DOMContentLoaded", () => {
+   const sideBar = document.querySelector('.sidebar');
+   const menu = document.querySelector('.menu-icon');
+   const closeIcon = document.querySelector('.close-icon');
+
+   menu.addEventListener("click", () => {
+      sideBar.classList.remove("close-sidebar");
+      sideBar.classList.add("open-sidebar");
+   });
+
+   closeIcon.addEventListener("click", () => {
+      sideBar.classList.remove("open-sidebar");
+      sideBar.classList.add("close-sidebar");
+   });
+});

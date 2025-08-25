@@ -26,28 +26,25 @@ html{
 
 
 
-header{
+header {
     display: flex;
     position: absolute;
     top: 0;
+    left: 0; /* enlever left:25% */
     right: 0;
-    left: 0;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
+    justify-content: center; /* centre horizontalement */
     height: 70px;
-    color: black;
-    z-index: 999;
+    z-index: 99;
 }
 
-header ul{
+header ul {
     display: flex;
-    justify-content: space-evenly;
-    gap: 50px;
-    padding: 15px 15px;
-     color: black;
-   
-    
+    gap: 80px; /* espace entre les li */
+    justify-content: center; /* centre le contenu du ul */
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 header ul li{
@@ -188,11 +185,21 @@ header ul a{
   
 
   .left h2 {
-    position: relative;
-    text-align: center;
-    left: 80%;
+     text-align: center;
+     margin-top: 25px;
     
+    margin-left: 20px;
   }
+
+  .hero-info h1{
+    color: #000;
+    position: relative;
+    top: -63%;
+    z-index: 999;
+    }
+    .menu-icon {
+        color: #000;
+    }
 }
 
 /* Gradient Animation */
@@ -545,8 +552,8 @@ header ul a{
         display: none;
     }
     .hero-info h1{
-        font-size: 40px;
-        max-width: 600px;
+        font-size: 30px;
+        max-width: 500px;
         line-height: 40px;
     }
 
