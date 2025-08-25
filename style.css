@@ -67,8 +67,32 @@ header ul a{
     font-weight: 700;
     font-size: 1.5rem;
 }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 
+@media (max-width: 768px) {
+  header ul {
+    display: none; /* cache le menu */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+  }
 
+  header ul.show {
+    display: flex; /* quand on toggle */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 .hero {
   position: relative;
   display: flex;
@@ -159,12 +183,15 @@ header ul a{
      z-index: 2;
       /* la vague passe au-dessus */ 
     margin-top: -25px;} 
-.wave2 svg { display: block; width: 100%; height: auto; margin-bottom: 10px; }
+.wave2 svg { display: block; width: 100%; height: auto; }
 @media (max-width: 768px) {
   
 
   .left h2 {
-    display: none;
+    position: relative;
+    text-align: center;
+    left: 80%;
+    
   }
 }
 
@@ -172,7 +199,9 @@ header ul a{
 
 
 
-
+#experience{
+    text-align: justify;
+}
 
 
 /* Enhanced About Section */
@@ -433,29 +462,62 @@ header ul a{
 }
 
 
-.sidebar{
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 70%;
-    width: 0%;
-    background-color: #000000b8;
-    z-index: 999;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.479);
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    border-bottom-left-radius: 100%;
-    
+.menu-icon{
+   font-size: 35px;
+   cursor: pointer;
+   color: white;
+   z-index: 1000;
+   position: relative;
+   left: 40%;
+   margin-top: 17px;
+}
+
+.sidebar {
+   position: fixed;
+   right: 0;
+   top: 0;
+   height: 100%;
+   width: 0;
+   background-color: rgba(0,0,0,0.9);
+   overflow: hidden;
+   transition: all 0.5s ease;
+   z-index: 999;
+}
+
+.sidebar.open-sidebar {
+   width: 80%;   /* largeur quand ouverte */
+   opacity: 1;
+   
+}
+
+.sidebar.close-sidebar {
+   width: 0;     /* largeur quand fermée */
+   opacity: 0;
 }
 
 .close-icon{
-    font-size: 50px;
-    color: lightgray;
-    padding-left: 10px;
-    cursor: pointer;
+   font-size: 40px;
+   color: white;
+   padding: 15px;
+   cursor: pointer;
 }
 
+.sidebar ul{
+   padding: 20px;
+}
 
+.sidebar ul li{
+   list-style: none;
+   margin: 20px 0;
+   text-align: center;
+}
+
+.sidebar ul li a{
+   text-decoration: none;
+   color: white;
+   font-size: 24px;
+   text-align: center;
+}
 
 
 
@@ -692,6 +754,9 @@ header ul a{
     }
 }
 
+#contact{
+    margin-top: 2px;
+}
 
 @media screen and (max-width: 480px) {
 
