@@ -181,27 +181,50 @@ header ul a{
       /* la vague passe au-dessus */ 
     margin-top: -25px;} 
 .wave2 svg { display: block; width: 100%; height: auto; }
+
+
 @media (max-width: 768px) {
   
-
-  .left h2 {
-     text-align: center;
-     margin-top: 25px;
+  .hero-info h1{
+    font-size: 30px;     /* taille plus petite */
+        /* éviter que ça dépasse */
+    line-height: 1.4;    /* line-height relatif, plus fluide */
+    word-break: break-word; /* si le mot est trop long, il passe à la ligne */
+    text-align: center; 
+    z-index: 9999; /* centrer pour mobile */
+    }
+    .menu-icon {
+        color: #000;
+    }
     
-    margin-left: 20px;
-  }
+}
 
+@media (max-width: 444px) {
+  
+  .hero-info h1{
+    font-size: 20px;     /* taille plus petite */
+        /* éviter que ça dépasse */
+    line-height: 1.4;    /* line-height relatif, plus fluide */
+    word-break: break-word; /* si le mot est trop long, il passe à la ligne */
+    text-align: center; 
+    z-index: 9999; /* centrer pour mobile */
+    }
+    
+}
+
+@media (max-width: 768px) {
+  .hero iframe {
+    height: 50vh; /* moitié de l’écran */
+  }
   .hero-info h1{
     color: #000;
     position: relative;
     top: -63%;
     z-index: 999;
+    font-size: 20px;
     }
-    .menu-icon {
-        color: #000;
-    }
-}
 
+}
 /* Gradient Animation */
 
 
@@ -545,17 +568,8 @@ header ul a{
 
 
 @media screen and (max-width: 1200px){
-    .blackhole-box video{
-        margin-top: -20%;
-    }
-    svg{
-        display: none;
-    }
-    .hero-info h1{
-        font-size: 30px;
-        max-width: 500px;
-        line-height: 40px;
-    }
+   
+    
 
     .hero-info P{
         max-width: 300px;
@@ -800,7 +814,7 @@ header ul a{
     }
 
     .hero-info h1{
-        font-size: 35px;
+        font-size: 20px;
     }
 
     .scroll-down{
