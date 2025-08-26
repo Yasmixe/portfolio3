@@ -794,6 +794,10 @@ header ul a{
 
     .hero {
         scale: 1;
+        margin-bottom: -150px;
+    }
+    .hero iframe{
+        margin-bottom: -100px;
     }
 
     .hero-info{
@@ -808,7 +812,7 @@ header ul a{
   display: block;
   width: 100%;
   height: auto;
-   margin-top: -300px;
+   margin-top: -200px;
 }
     .hero-info h1{
        
