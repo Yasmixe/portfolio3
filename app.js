@@ -116,17 +116,22 @@ const seeMoreBtn = document.getElementById('see-more-btn');
             seeMoreBtn.textContent = exp3.classList.contains('hidden') ? 'See More' : 'See Less';
         });
 document.addEventListener("DOMContentLoaded", () => {
-   const sideBar = document.querySelector('.sidebar');
-   const menu = document.querySelector('.menu-icon');
-   const closeIcon = document.querySelector('.close-icon');
+  const menuIcon = document.querySelector(".menu-icon i");
+const sidebar = document.querySelector(".sidebar");
+const closeIcon = document.querySelector(".close-icon i");
 
-   menu.addEventListener("click", () => {
-      sideBar.classList.remove("close-sidebar");
-      sideBar.classList.add("open-sidebar");
-   });
+// Ouvrir le menu
+menuIcon.addEventListener("click", () => {
+  sidebar.classList.remove("close-sidebar");
+  sidebar.classList.add("open-sidebar");
+  menuIcon.style.color = "white"; // devient blanc quand sidebar ouverte
+});
 
-   closeIcon.addEventListener("click", () => {
-      sideBar.classList.remove("open-sidebar");
-      sideBar.classList.add("close-sidebar");
-   });
+// Fermer le menu avec X
+closeIcon.addEventListener("click", () => {
+  sidebar.classList.remove("open-sidebar");
+  sidebar.classList.add("close-sidebar");
+  menuIcon.style.color = "black"; // redevient noir quand on ferme
+});
+
 });
