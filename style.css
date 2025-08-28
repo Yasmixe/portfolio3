@@ -255,7 +255,7 @@ header ul a{
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 60px;
             align-items: center;
         }
@@ -316,6 +316,7 @@ header ul a{
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-left: 100px;
 
   /* Décalage vers la droite et vers le haut */
   transform: translate(30px, -20px);
@@ -829,8 +830,10 @@ header ul a{
         font-size: 25px;
     }
 
-    
-
+ 
+.image img{
+    margin-left: -100px;
+}
    
 }
 
